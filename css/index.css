@@ -1,0 +1,318 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f6c90e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #303841;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: white;
+  z-index: 99;
+  position: fixed;
+  width: 100vw;
+  padding: 15px 0;
+}
+
+nav .container {
+  gap: 20px;
+}
+
+nav .container .bar {
+  display: none;
+  cursor: pointer;
+}
+
+nav .container .logo {
+  width: 15vw;
+  position: relative;
+}
+
+nav .container .logo img {
+  width: 100%;
+}
+
+nav .container .list {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .container .list .list-satu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+nav .container .list .list-dua {
+  display: flex;
+  gap: 20px;
+}
+
+nav .container .list a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3a4750;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+nav .container .list a:hover {
+  color: #f6c90e;
+}
+
+@media screen and (max-width: 576px) {
+  nav .container .logo {
+    width: 50vw;
+  }
+  nav .container .logo img {
+    width: 70%;
+  }
+  nav .container .bar {
+    display: block;
+  }
+  nav .container .bar img {
+    width: 25px;
+  }
+  nav .container .bar img:hover {
+    width: 22px;
+  }
+  nav .container .list {
+    background-color: #fff;
+    border-right: 3px outset #3a4750;
+    left: 0;
+    top: 0;
+    position: fixed;
+    text-align: center;
+    width: 220px !important;
+    height: 100vh;
+    flex-direction: column;
+    transform: translateX(-100%);
+    justify-content: center !important;
+    transition: all 0.4s;
+    gap: 20px;
+  }
+  nav .container .list .list-satu {
+    flex-direction: column;
+  }
+  nav .container .list .list-dua {
+    flex-direction: column;
+  }
+}
+
+.slide-toggle {
+  transform: translateX(0) !important;
+}
+
+.swiper-container {
+  height: 100vh;
+}
+
+.swiper-container .swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+  background-color: white;
+  position: relative;
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid white;
+  color: #3a4750;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide.landing-page {
+  background-image: url("../img/pegunungan.jpg");
+  width: 100%;
+  box-shadow: 2px -3px 315px 78px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: 2px -3px 315px 78px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 2px -3px 315px 78px rgba(0, 0, 0, 0.5) inset;
+  background-position: center top;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide.landing-page h3,
+.swiper-container .swiper-wrapper .swiper-slide.landing-page p {
+  background: white;
+  padding: 20px 30px;
+  font-weight: bold;
+  color: #3a4750;
+  font-size: 1.7em;
+  width: fit-content;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide.landing-page p {
+  padding: 5px 10px !important;
+  font-size: 1.2em;
+  width: 60% !important;
+}
+
+@media screen and (max-width: 576px) {
+  .swiper-container .swiper-wrapper .swiper-slide.landing-page h3 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .swiper-container .swiper-wrapper .swiper-slide.landing-page p {
+    font-size: 0.6rem;
+    padding: 5px 7px;
+  }
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .text {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .text p {
+  width: 85%;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .img {
+  width: 50%;
+  margin: auto;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .swiper-container .swiper-wrapper .swiper-slide {
+    flex-direction: column !important;
+  }
+  .swiper-container .swiper-wrapper .swiper-slide .text {
+    width: 100%;
+    height: 45%;
+    justify-content: flex-end !important;
+    margin-top: 15px;
+  }
+  .swiper-container .swiper-wrapper .swiper-slide .img {
+    width: 100%;
+  }
+}
+
+.about {
+  background-color: #ccc;
+  padding: 50px 0;
+  margin-bottom: 100px;
+}
+
+.about .container .text {
+  color: #3a4750;
+  height: 100%;
+  margin: auto;
+}
+
+.about .container .text h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.about .container .text p {
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: 450;
+}
+
+.about .container .img img {
+  width: 100%;
+}
+
+.customer {
+  padding: 30px 0;
+}
+
+.customer .swiper-customer {
+  overflow: hidden;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide {
+  filter: blur(10px);
+  width: 300px;
+  height: 320px;
+  background-color: #d1f4fa;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide.swiper-slide-active {
+  filter: blur(0px) !important;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide .swiper-slide-shadow-left {
+  background-image: none;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide figure blockquote {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide figure .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide figure .img img {
+  width: 100px;
+}
+
+.customer .swiper-customer .swiper-wrapper .swiper-slide figure .img figcaption {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .customer .swiper-customer .swiper-wrapper .swiper-slide {
+    width: 200px;
+    height: 250px;
+  }
+  .customer .swiper-customer .swiper-wrapper .swiper-slide figure blockquote {
+    font-size: 0.88rem;
+  }
+  .customer .swiper-customer .swiper-wrapper .swiper-slide figure .img img {
+    width: 50px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
